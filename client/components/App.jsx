@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Search from './Search';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -12,8 +14,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <h1>Hello world!</h1>
-    )
+      <div>
+        {this.state.showSearch ? <Search /> : <div>Nothing here yet!</div>}
+      </div>
+    );
   }
 }
 
