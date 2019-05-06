@@ -1,0 +1,36 @@
+{
+  "name": "hrsf113-mvp",
+  "version": "1.0.0",
+  "description": "Minimum viable product",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krise3/hrsf113-mvp.git"
+  },
+  "author": "Kristoffer Enriquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krise3/hrsf113-mvp/issues"
+  },
+  "homepage": "https://github.com/krise3/hrsf113-mvp#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.5",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "jest": "^24.8.0",
+    "webpack": "^4.30.0"
+  }
+}
