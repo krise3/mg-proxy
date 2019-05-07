@@ -1,7 +1,10 @@
 import React from 'react';
+import axios from 'axios';
 
 import Search from './Search/Search';
 import Insert from './Insert/Insert';
+
+const BASE_ROUTE = '/api/?'
 
 class App extends React.Component {
   constructor(props) {
@@ -14,7 +17,6 @@ class App extends React.Component {
       currentAlbum: {}
     }
 
-    this.queryHandler = this.queryHandler.bind(this);
     this.changeView = this.changeView.bind(this);
   }
 
@@ -22,8 +24,18 @@ class App extends React.Component {
     this.setState({ currentPage: e.target.className });
   }
 
-  queryHandler() {
-    this.setState({ currentPage: 'INSERT' });
+  queryHandler(e) {
+    const category = e.target.previousSibling.previousSibling.value;
+    const query = e.target.previousSibling.value.replace(/( |&|\$|#|=)/g, '+');
+    const PATH = BASE_ROUTE + category + '=' + query;
+    
+    console.log(PATH);
+
+    axios.get(PATH)
+    .then(response => {
+      console.log(response.data);
+    })
+    .catch(error => console.error(error));
   }
 
   render() {

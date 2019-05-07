@@ -10,7 +10,7 @@ const Search = ({ queryHandler }) => (
   }}>
     <select>
       <option value="label">Label</option>
-      <option value="album-artist">Album Artist</option>
+      <option value="album_artist">Album Artist</option>
       <option value="published">Date</option>
       <option value="title">Title</option>
     </select>

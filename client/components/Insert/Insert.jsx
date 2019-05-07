@@ -88,14 +88,24 @@ class Insert extends React.Component {
               case 'additional_info':
                 return (
                   <div key={key}>
-                    {this.state[key].map((element, index) => <Additional number={index + 1} handleChange={this.handleChange} />)}
+                    {this.state[key].map((element, index) =>
+                      <Additional
+                      number={index + 1}
+                      handleChange={this.handleChange}
+                      />
+                    )}
                   </div>
                 );
 
               case 'songs':
                 return (
                   <div key={key}>
-                    {this.state[key].map((element, index) => <Song number={index + 1} handleChange={this.handleChange} />)}
+                    {this.state[key].map((element, index) =>
+                      <Song
+                      number={index + 1}
+                      handleChange={this.handleChange}
+                      />
+                    )}
                   </div>
                 );
 
