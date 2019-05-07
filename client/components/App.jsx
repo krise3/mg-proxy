@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import Search from './Search/Search';
 import Form from './Insert/Form';
+import Browse from './Browse/Browse';
 
 const BASE_ROUTE = '/api/album/?'
 
@@ -22,13 +23,14 @@ class App extends React.Component {
   }
 
   changeView(e, view) {
-    view = view || e.target.className
+    view = view || e.target.className;
     this.setState({ currentPage: view });
   }
 
   queryHandler(e) {
     const category = e.target.parentNode.children[0].children[0].value;
     const query = e.target.previousSibling.value.replace(/( |&|\$|#|=)/g, '+');
+    
     const PATH = BASE_ROUTE + category + '=' + query;
 
     axios.get(PATH)
@@ -36,12 +38,15 @@ class App extends React.Component {
       this.setState({
         queryResults: response.data
       });
+      this.changeView(e, 'BROWSE');
     })
     .catch(error => console.error(error));
   }
 
   render() {
     switch (this.state.currentPage) {
+      case 'BROWSE':
+        return <Browse albumList={this.state.queryResults} changeView={this.changeView} />;
       case 'INSERT':
         return <Form changeView={this.changeView} />;
       default:
