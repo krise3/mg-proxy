@@ -1,4 +1,4 @@
-# Project Name #
+# meta-getta #
 
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -17,28 +17,29 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > Music metadata library
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > For music collectors and archivers
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > An easy to use, easy to contribute to metadata library that absorbs all music.
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > Sometimes it's impossible to find the metadata you're looking for. Users might resort to copy-pasting from a retailer website.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > Provides both a website and an API for music metadata lookup.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > "We at meta-getta are dedicated to the archival and distribution of music-related information.
+  We're pleased to announce our single-page web-app offers everything a user could possibly ask for."
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > Hop on the website and search for an album through one of the listed criteria, or submit your own album metadata for others to see
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > "I'm impressed with the usability of meta-getta. I would definitely recommend it to anyone looking for fast and easy music metadata lookup!"
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > Browse to (mettagetta.com?) and try searching or contributing, or see what the api returns at (/api/albums)
