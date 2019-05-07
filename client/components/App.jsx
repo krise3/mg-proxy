@@ -15,7 +15,11 @@ class App extends React.Component {
     }
 
     this.queryHandler = this.queryHandler.bind(this);
+    this.changeView = this.changeView.bind(this);
+  }
 
+  changeView(e) {
+    this.setState({ currentPage: e.target.className });
   }
 
   queryHandler() {
@@ -27,7 +31,12 @@ class App extends React.Component {
       case 'INSERT':
         return <Insert />;
       default:
-        return <Search queryHandler={this.queryHandler} />;
+        return (
+          <div>
+            <button onClick={this.changeView} className='INSERT'>Contribute an album</button>
+            <Search queryHandler={this.queryHandler} />
+          </div>
+        );
     }
   }
 }
