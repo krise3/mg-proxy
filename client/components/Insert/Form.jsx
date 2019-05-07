@@ -56,7 +56,6 @@ class Form extends React.Component {
     const parent = e.target.parentElement.className;
     if (parent === 'songs' || parent === 'additional_info') {
       let array = this.state[parent];
-      console.log(e.target.id, e.target.name);
       array[e.target.id][e.target.name] = e.target.value;
       this.setState({
         [parent]: array
@@ -73,7 +72,6 @@ class Form extends React.Component {
     let submission = Object.assign({}, this.state);
     submission.songs = JSON.stringify(submission.songs);
     submission.additional_info = JSON.stringify(submission.additional_info);
-    console.log(submission);
   }
 
   render() {
