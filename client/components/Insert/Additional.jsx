@@ -7,14 +7,14 @@ const additionalKeys = Object.keys(additional);
 const Additional = ({ number, handleChange }) => (
   <div className='additional_info'>
     {
-      additionalKeys.map((element) => (
+      additionalKeys.map((element, index) => (
         <input
         key={element + '-' + number}
         type='text'
         id={number - 1}
         name={element}
         onChange={handleChange}
-        className='form-input-line'
+        className={index !== 0 ? 'form-input-line-a' : 'form-label'}
         ></input>
       ))
     }

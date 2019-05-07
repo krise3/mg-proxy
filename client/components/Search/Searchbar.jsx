@@ -2,19 +2,21 @@ import React from 'react';
 
 const Searchbar = ({ queryHandler }) => (
   <div
-  id="Querybar"
+  id="search-bar"
   style={{
     display: "flex",
     alignContent: "middle",
     justifyContent: "center", 
   }}>
-    <select>
-      <option value="label">Label</option>
-      <option value="album_artist">Album Artist</option>
-      <option value="published">Date</option>
-      <option value="title">Title</option>
-    </select>
-    <input type="text" name="query"></input>
+    <div id='wrapper-select'>
+      <select>
+        <option value="label">Label</option>
+        <option value="album_artist">Album Artist</option>
+        <option value="published">Date</option>
+        <option value="title">Title</option>
+      </select>
+    </div>
+    <input type="text" name="query" id='search-input'></input>
     <button onClick={queryHandler}>Query</button>
   </div>
 );

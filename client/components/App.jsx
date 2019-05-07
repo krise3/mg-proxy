@@ -39,14 +39,9 @@ class App extends React.Component {
   render() {
     switch (this.state.currentPage) {
       case 'INSERT':
-        return <Form />;
+        return <Form changeView={this.changeView} />;
       default:
-        return (
-          <div>
-            <button onClick={this.changeView} className='INSERT'>Contribute an album</button>
-            <Search queryHandler={this.queryHandler} />
-          </div>
-        );
+        return <Search queryHandler={this.queryHandler} changeView={this.changeView} />;
     }
   }
 }

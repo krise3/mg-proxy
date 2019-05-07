@@ -69,37 +69,43 @@ class Form extends React.Component {
 
   submit(e) {
     e.preventDefault();
-    console.log(this.state);
+    let submission = Object.assign({}, this.state);
+    submission.songs = JSON.stringify(submission.songs);
+    submission.additional_info = JSON.stringify(submission.additional_info);
   }
 
   render() {
     return (
       <div>
-        <button onClick={this.addSong}>Add song</button>
-        <button onClick={this.rmSong}>Remove song</button>
-        <button onClick={this.addInfo}>Add additional info</button>
-        <button onClick={this.rmInfo}>Remove additional info</button>
         <br></br>
-        <button onClick={this.submit}>Submit</button>
-        <form>
-          {albumKeys.map((key, index) => {
-            switch (key) {
-
-              case 'additional_info':
+        <form id='insert-form'>
+          <div className='button-container'>
+            <button onClick={this.submit} id='button-submit'>Submit</button>
+            <img src='/closeButton.png' className='SEARCH' id='button-close' onClick={this.props.changeView} />
+          </div>
+          <div id='insert-flexbox'>
+            {albumKeys.map((key, index) => {
+              switch (key) {
+                
+                case 'additional_info':
                 return (
                   <div key={key}>
-                    {this.state[key].map((element, index) =>
-                      <Additional
-                      number={index + 1}
-                      handleChange={this.handleChange}
-                      />
-                    )}
-                  </div>
-                );
-
-              case 'songs':
+                  <button onClick={this.addInfo}>Add metadata field</button>
+                  <button onClick={this.rmInfo}>Remove metadata field</button>
+                      {this.state[key].map((element, index) =>
+                        <Additional
+                        number={index + 1}
+                        handleChange={this.handleChange}
+                        />
+                        )}
+                    </div>
+                  );
+                    
+                case 'songs':
                 return (
                   <div key={key}>
+                  <button onClick={this.addSong}>Add song</button>
+                  <button onClick={this.rmSong}>Remove song</button>
                     {this.state[key].map((element, index) =>
                       <Song
                       number={index + 1}
@@ -109,19 +115,24 @@ class Form extends React.Component {
                   </div>
                 );
 
-              default:
-                return (
-                  <label key={'label-' + index.toString()}>{album[key] + ' '}
-                    <input
-                    key={'input-' + index.toString()}
-                    type='text' name={key}
-                    onChange={this.handleChange}
-                    className='form-input-line'
-                    ></input>
-                  </label>
-                );
-            }
-          })}
+                default:
+                  return (
+                    <div className='base-flexrow'>
+                      <label
+                      key={'label-' + index.toString()}
+                      className='form-label'
+                      >{album[key] + ' '}</label>
+                      <input
+                      key={'input-' + index.toString()}
+                      type='text' name={key}
+                      onChange={this.handleChange}
+                      className='form-input-line-a'
+                      ></input>
+                    </div>
+                  );
+              }
+            })}
+          </div>
         </form>
       </div>
     );
