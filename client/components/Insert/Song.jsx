@@ -11,10 +11,9 @@ const Song = ({ number, handleChange }) => (
   ><div className='song-number-round'>{number}</div>
     {songKeys.map((key, index) => {
       return (
-        <div className={key}>
+        <div className={key} className='songs'>
           <label
           key={'song-' + index}
-          className='songs'
           >{song[key] + ' '}
           </label>
           <input
@@ -22,7 +21,7 @@ const Song = ({ number, handleChange }) => (
           name={key}
           key={key + '-' + index}
           id={number - 1}
-          classname={'song-input'}
+          className={'song-input'}
           onChange={handleChange}
           ></input>
         </div>

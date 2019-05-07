@@ -61,6 +61,12 @@ label {
   align-items: center;
 }
 
+.additional_info {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
 input.form-input-line-a {
   width: 85%;
   flex-grow: 1;
