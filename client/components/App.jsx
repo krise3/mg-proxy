@@ -28,8 +28,6 @@ class App extends React.Component {
     const category = e.target.previousSibling.previousSibling.value;
     const query = e.target.previousSibling.value.replace(/( |&|\$|#|=)/g, '+');
     const PATH = BASE_ROUTE + category + '=' + query;
-    
-    console.log(PATH);
 
     axios.get(PATH)
     .then(response => {
