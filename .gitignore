@@ -33,3 +33,6 @@ bower_components/
 .floobit
 .floo
 .flooignore
+
+# Compiled files
+public/bundle.js
