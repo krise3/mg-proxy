@@ -2,7 +2,7 @@ const { Schema, model } = require('./connect.js');
 
 const albumSchema = new Schema({
   label: String,
-  album_arist: String,
+  album_artist: String,
   published: String,
   catalog_number: String,
   title: String,
