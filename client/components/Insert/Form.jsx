@@ -116,6 +116,7 @@ class Form extends React.Component {
                     key={'input-' + index.toString()}
                     type='text' name={key}
                     onChange={this.handleChange}
+                    className='form-input-line'
                     ></input>
                   </label>
                 );

@@ -14,6 +14,7 @@ const Additional = ({ number, handleChange }) => (
         id={number - 1}
         name={element}
         onChange={handleChange}
+        className='form-input-line'
         ></input>
       ))
     }

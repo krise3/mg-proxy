@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 import Search from './Search/Search';
-import Insert from './Insert/Insert';
+import Form from './Insert/Form';
 
 const BASE_ROUTE = '/api/?'
 
@@ -39,7 +39,7 @@ class App extends React.Component {
   render() {
     switch (this.state.currentPage) {
       case 'INSERT':
-        return <Insert />;
+        return <Form />;
       default:
         return (
           <div>
