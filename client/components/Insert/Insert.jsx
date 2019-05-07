@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { album, song, additional } from '../datashapes';
+import { album, song, additional } from '../../datashapes';
 
 import Song from './Song';
 import Additional from './Additional';

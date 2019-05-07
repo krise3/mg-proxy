@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { additional } from '../datashapes';
+import { additional } from '../../datashapes';
 
 const additionalKeys = Object.keys(additional);
 

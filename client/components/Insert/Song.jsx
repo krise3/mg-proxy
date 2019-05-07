@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { song } from '../datashapes';
+import { song } from '../../datashapes';
 
 const songKeys = Object.keys(song);
 

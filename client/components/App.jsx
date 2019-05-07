@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Search from './Search';
-import Insert from './Insert';
+import Search from './Search/Search';
+import Insert from './Insert/Insert';
 
 class App extends React.Component {
   constructor(props) {
