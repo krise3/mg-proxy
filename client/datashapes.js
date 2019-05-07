@@ -1,6 +1,6 @@
 export const album = {
   label: 'Label',
-  album_arist: 'Album Artist',
+  album_artist: 'Album Artist',
   published: 'Publish Date',
   catalog_number: 'Catalog Number',
   title: 'Title',
