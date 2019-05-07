@@ -1,16 +1,16 @@
 import React from 'react';
 
+import { song } from '../datashapes';
+
+const songKeys = Object.keys(song);
+
 const Song = ({ song, number }) => (
   <div key={'song-' + number}>{number + ': '}
-    <label>Title
-      <input type='text' name='title'></input>
-    </label>
-    <label>Song Artist
-      <input type='text' name='song-artist'></input>
-    </label>
-    <label>Duration
-      <input type='text' name='duration'></input>
-    </label>
+    {songKeys.map((key, index) => {
+      <label key={'song-' + index}>{song[key]}
+        <input type='text' name={key}></input>
+      </label>
+    })}
   </div>
 );
 
