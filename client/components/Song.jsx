@@ -7,9 +7,11 @@ const songKeys = Object.keys(song);
 const Song = ({ song, number }) => (
   <div key={'song-' + number}>{number + ': '}
     {songKeys.map((key, index) => {
-      <label key={'song-' + index}>{song[key]}
-        <input type='text' name={key}></input>
-      </label>
+      return (
+        <label key={'song-' + index}>{song[key]}
+          <input type='text' name={key}></input>
+        </label>
+      );
     })}
   </div>
 );
