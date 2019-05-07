@@ -21,8 +21,9 @@ class App extends React.Component {
     this.queryHandler = this.queryHandler.bind(this);
   }
 
-  changeView(e) {
-    this.setState({ currentPage: e.target.className });
+  changeView(e, view) {
+    view = view || e.target.className
+    this.setState({ currentPage: view });
   }
 
   queryHandler(e) {
