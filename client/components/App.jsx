@@ -18,6 +18,7 @@ class App extends React.Component {
     }
 
     this.changeView = this.changeView.bind(this);
+    this.queryHandler = this.queryHandler.bind(this);
   }
 
   changeView(e) {
@@ -31,7 +32,9 @@ class App extends React.Component {
 
     axios.get(PATH)
     .then(response => {
-      console.log(response.data);
+      this.setState({
+        queryResults: response.data
+      });
     })
     .catch(error => console.error(error));
   }
