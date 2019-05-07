@@ -1,9 +1,15 @@
 body {
+  background-color: #500020;
+  margin: 0px
+}
+
+#app {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #500020;
 }
 
 button {
@@ -35,10 +41,25 @@ label {
   margin: 5px;
 }
 
-#insert-form {
-  margin: 15px;
+#search-view {
   display: flex;
   flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+}
+
+#insert-form {
+  margin: 15px;
+  width: 1000px;
+  background-color: #47001B;
+  border-radius: 5px;
+  padding: 50px;
 }
 
 .form-label {
@@ -46,10 +67,6 @@ label {
 }
 
 #insert-flexbox {
-  width: 1000px;
-  background-color: #47001B;
-  border-radius: 5px;
-  padding: 50px;
   display: flex;
   flex-flow: column nowrap;
   align-items: stretch;
@@ -113,7 +130,13 @@ input.form-input-line-a {
   margin-bottom: 20px;
 }
 
+#button-close {
+  width: 40px;
+  height: 40px;
+  object-fit: fill;
+}
+
 .button-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
