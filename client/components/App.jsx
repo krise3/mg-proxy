@@ -4,7 +4,7 @@ import axios from 'axios';
 import Search from './Search/Search';
 import Form from './Insert/Form';
 
-const BASE_ROUTE = '/api/?'
+const BASE_ROUTE = '/api/album/?'
 
 class App extends React.Component {
   constructor(props) {
@@ -25,7 +25,7 @@ class App extends React.Component {
   }
 
   queryHandler(e) {
-    const category = e.target.previousSibling.previousSibling.value;
+    const category = e.target.parentNode.children[0].children[0].value;
     const query = e.target.previousSibling.value.replace(/( |&|\$|#|=)/g, '+');
     const PATH = BASE_ROUTE + category + '=' + query;
 
