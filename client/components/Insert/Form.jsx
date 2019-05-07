@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 import { album, song, additional } from '../../datashapes';
 
@@ -72,6 +73,12 @@ class Form extends React.Component {
     let submission = Object.assign({}, this.state);
     submission.songs = JSON.stringify(submission.songs);
     submission.additional_info = JSON.stringify(submission.additional_info);
+    
+    console.log(submission);
+
+    axios.post('/api/album', submission)
+    .then(response => this.props.changeView(e, 'SEARCH'))
+    .catch(error => console.error(error));
   }
 
   render() {
