@@ -23,13 +23,14 @@ class App extends React.Component {
   }
 
   changeView(e, view) {
-    view = view || e.target.className
+    view = view || e.target.className;
     this.setState({ currentPage: view });
   }
 
   queryHandler(e) {
     const category = e.target.parentNode.children[0].children[0].value;
     const query = e.target.previousSibling.value.replace(/( |&|\$|#|=)/g, '+');
+    
     const PATH = BASE_ROUTE + category + '=' + query;
 
     axios.get(PATH)
