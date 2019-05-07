@@ -1,21 +1,13 @@
 import React from 'react';
 
-const formShape = {
-  label: 'Label',
-  album_arist: 'Album Artist',
-  published: 'Publish Date',
-  catalog_number: 'Catalog Number',
-  title: 'Title',
-  additional_info: [],
-  songs: []
-};
+import { album, song, additional } from '../datashapes';
 
-const formKeys = Object.keys(formShape);
+const albumKeys = Object.keys(album);
 
 class Insert extends React.Component {
   constructor(props) {
     super(props);
-    this.state = Object.assign({}, formShape);
+    this.state = Object.assign({}, album);
   }
 
   render() {
@@ -27,7 +19,7 @@ class Insert extends React.Component {
         alignContent: 'end',
         justifyContent: 'center',
       }}>
-        {formKeys.map((key, index) => {
+        {albumKeys.map((key, index) => {
           switch (key) {
 
             case 'additional_info':
@@ -41,10 +33,10 @@ class Insert extends React.Component {
 
             case 'songs':
               return <div key={key}>{this.state[key].map((element, index) => <Song song={element} number={index + 1}/>)}</div>;
-              
+
             default:
               return (
-                <label key={'label-' + index.toString()}>{formShape[key] + ' '}
+                <label key={'label-' + index.toString()}>{album[key] + ' '}
                   <input key={'input-' + index.toString()} type='text' name={key}></input>
                 </label>
               );
