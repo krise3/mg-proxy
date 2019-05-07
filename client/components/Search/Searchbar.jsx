@@ -2,7 +2,7 @@ import React from 'react';
 
 const Searchbar = ({ queryHandler }) => (
   <div
-  id="Querybar"
+  id="search-bar"
   style={{
     display: "flex",
     alignContent: "middle",

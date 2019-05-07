@@ -3,9 +3,9 @@ import React from 'react';
 import Searchbar from './Searchbar';
 
 const Search = ({ queryHandler, changeView }) => (
-  <div style={{ width: 'inherit' }}>
-    <button onClick={changeView} className='INSERT'>Contribute an album</button>
+  <div id='search-view'>
     <Searchbar queryHandler={queryHandler} />
+    <button onClick={changeView} className='INSERT'>Contribute an album</button>
   </div>
 );
 
