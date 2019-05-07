@@ -1,23 +1,34 @@
 import React from 'react';
 
 import Search from './Search';
+import Insert from './Insert';
 
 class App extends React.Component {
   constructor(props) {
+
     super(props);
+
     this.state = {
-      showSearch: true,
+      currentPage: 'SEARCH',
       queryResults: [],
       currentAlbum: {}
     }
+
+    this.queryHandler = this.queryHandler.bind(this);
+
+  }
+
+  queryHandler() {
+    this.setState({ currentPage: 'INSERT' });
   }
 
   render() {
-    return (
-      <div>
-        {this.state.showSearch ? <Search /> : <div>Nothing here yet!</div>}
-      </div>
-    );
+    switch (this.state.currentPage) {
+      case 'INSERT':
+        return <Insert />;
+      default:
+        return <Search queryHandler={this.queryHandler} />;
+    }
   }
 }
 
