@@ -41,12 +41,7 @@ class App extends React.Component {
       case 'INSERT':
         return <Form />;
       default:
-        return (
-          <div>
-            <button onClick={this.changeView} className='INSERT'>Contribute an album</button>
-            <Search queryHandler={this.queryHandler} />
-          </div>
-        );
+        return <Search queryHandler={this.queryHandler} changeView={this.changeView} />;
     }
   }
 }

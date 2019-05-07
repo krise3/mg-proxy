@@ -70,7 +70,7 @@ class Form extends React.Component {
 
   submit(e) {
     e.preventDefault();
-    let submission = Object.assign(this.state);
+    let submission = Object.assign({}, this.state);
     submission.songs = JSON.stringify(submission.songs);
     submission.additional_info = JSON.stringify(submission.additional_info);
     console.log(submission);
