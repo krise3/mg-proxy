@@ -81,10 +81,11 @@ class Form extends React.Component {
       <div>
         <br></br>
         <form id='insert-form'>
-          <div id='insert-flexbox'>
           <div className='button-container'>
             <button onClick={this.submit} id='button-submit'>Submit</button>
+            <img src='/closeButton.png' className='SEARCH' id='button-close' onClick={this.props.changeView} />
           </div>
+          <div id='insert-flexbox'>
             {albumKeys.map((key, index) => {
               switch (key) {
                 

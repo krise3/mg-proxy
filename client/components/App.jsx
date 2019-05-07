@@ -39,7 +39,7 @@ class App extends React.Component {
   render() {
     switch (this.state.currentPage) {
       case 'INSERT':
-        return <Form />;
+        return <Form changeView={this.changeView} />;
       default:
         return <Search queryHandler={this.queryHandler} changeView={this.changeView} />;
     }
