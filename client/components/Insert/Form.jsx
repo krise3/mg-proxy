@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { album, song, additional } from '../datashapes';
+import { album, song, additional } from '../../datashapes';
 
 import Song from './Song';
 import Additional from './Additional';
 
 const albumKeys = Object.keys(album);
 
-class Insert extends React.Component {
+class Form extends React.Component {
   constructor(props) {
     super(props);
 
@@ -81,27 +81,31 @@ class Insert extends React.Component {
         <button onClick={this.rmInfo}>Remove additional info</button>
         <br></br>
         <button onClick={this.submit}>Submit</button>
-        <form
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignContent: 'end',
-          justifyContent: 'center',
-        }}>
+        <form>
           {albumKeys.map((key, index) => {
             switch (key) {
 
               case 'additional_info':
                 return (
                   <div key={key}>
-                    {this.state[key].map((element, index) => <Additional number={index + 1} handleChange={this.handleChange} />)}
+                    {this.state[key].map((element, index) =>
+                      <Additional
+                      number={index + 1}
+                      handleChange={this.handleChange}
+                      />
+                    )}
                   </div>
                 );
 
               case 'songs':
                 return (
                   <div key={key}>
-                    {this.state[key].map((element, index) => <Song number={index + 1} handleChange={this.handleChange} />)}
+                    {this.state[key].map((element, index) =>
+                      <Song
+                      number={index + 1}
+                      handleChange={this.handleChange}
+                      />
+                    )}
                   </div>
                 );
 
@@ -112,6 +116,7 @@ class Insert extends React.Component {
                     key={'input-' + index.toString()}
                     type='text' name={key}
                     onChange={this.handleChange}
+                    className='form-input-line'
                     ></input>
                   </label>
                 );
@@ -123,4 +128,4 @@ class Insert extends React.Component {
   }
 }
 
-export default Insert;
+export default Form;

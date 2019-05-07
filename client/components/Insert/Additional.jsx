@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { additional } from '../datashapes';
+import { additional } from '../../datashapes';
 
 const additionalKeys = Object.keys(additional);
 
@@ -14,6 +14,7 @@ const Additional = ({ number, handleChange }) => (
         id={number - 1}
         name={element}
         onChange={handleChange}
+        className='form-input-line'
         ></input>
       ))
     }

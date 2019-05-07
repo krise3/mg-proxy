@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Search = ({ queryHandler }) => (
+const Searchbar = ({ queryHandler }) => (
   <div
   id="Querybar"
   style={{
@@ -10,7 +10,7 @@ const Search = ({ queryHandler }) => (
   }}>
     <select>
       <option value="label">Label</option>
-      <option value="album-artist">Album Artist</option>
+      <option value="album_artist">Album Artist</option>
       <option value="published">Date</option>
       <option value="title">Title</option>
     </select>
@@ -19,4 +19,4 @@ const Search = ({ queryHandler }) => (
   </div>
 );
 
-export default Search;
+export default Searchbar;

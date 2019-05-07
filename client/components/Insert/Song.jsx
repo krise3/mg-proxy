@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { song } from '../datashapes';
+import { song } from '../../datashapes';
 
 const songKeys = Object.keys(song);
 
@@ -18,6 +18,7 @@ const Song = ({ number, handleChange }) => (
           key={key + '-' + index}
           id={number - 1}
           onChange={handleChange}
+          className='form-input-line'
           ></input>
         </label>
       );
