@@ -81,13 +81,7 @@ class Insert extends React.Component {
         <button onClick={this.rmInfo}>Remove additional info</button>
         <br></br>
         <button onClick={this.submit}>Submit</button>
-        <form
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignContent: 'end',
-          justifyContent: 'center',
-        }}>
+        <form>
           {albumKeys.map((key, index) => {
             switch (key) {
 
