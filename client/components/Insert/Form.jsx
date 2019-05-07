@@ -7,7 +7,7 @@ import Additional from './Additional';
 
 const albumKeys = Object.keys(album);
 
-class Insert extends React.Component {
+class Form extends React.Component {
   constructor(props) {
     super(props);
 
@@ -127,4 +127,4 @@ class Insert extends React.Component {
   }
 }
 
-export default Insert;
+export default Form;
