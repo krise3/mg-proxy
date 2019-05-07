@@ -6,15 +6,15 @@ export const album = {
   title: 'Title',
   additional_info: [],
   songs: [],
-}
+};
 
 export const song = {
   title: 'Title',
   song_artist: 'Song Artist',
   duration: 'Duration',
-}
+};
 
 export const additional = {
   field: '',
   value: '',
-}
+};
